@@ -10,6 +10,9 @@ const (
 	MoveToStart = "\r"
 	MoveOneUp   = "\x1b[1A"
 	ExitMessage = "/exit\n"
+	GetLog      = "/getlog\n"
+	GetUsers    = "/getusers\n"
+	Private     = "/private"
 )
 
 func ReadMessage(conn net.Conn) (string, error) {
