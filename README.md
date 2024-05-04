@@ -15,7 +15,7 @@ These instructions will get you a copy of the project up and running on your loc
 1. **Clone the repository:**
 
    ```sh
-   git clone https://github.com/m-d-nabeel/cmd-line-message-app.git
+   git clone https://github.com/m-d-nabeel/go-cli-chat.git
    ```
 
 2. **Change to the project directory:**
