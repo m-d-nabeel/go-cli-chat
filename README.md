@@ -21,7 +21,7 @@ These instructions will get you a copy of the project up and running on your loc
 2. **Change to the project directory:**
 
    ```sh
-   cd cmd-line-message-app
+   cd go-cli-chat
    ```
 
 3. **Build the server:**
