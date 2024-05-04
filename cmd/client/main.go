@@ -27,6 +27,7 @@ func main() {
 	}
 
 	fmt.Println("Connected to server")
+	showOptions()
 	go client.ReceiveMessages()
 	go client.SendMessages()
 
@@ -34,4 +35,15 @@ func main() {
 		fmt.Println("Closing connection")
 		return
 	}
+}
+
+func showOptions() {
+	fmt.Println("Options:")
+	fmt.Println("1. \"/exit\" to exit")
+	fmt.Println("2. \"/getlog\" to get chat log")
+	fmt.Println("3. \"/getusers\" to get users list")
+	fmt.Println("4. \"/private [username] [message]\" to send private message")
+	fmt.Println("5. Type message to send to all users")
+	fmt.Println("6. Press Ctrl+C to exit")
+	fmt.Println()
 }

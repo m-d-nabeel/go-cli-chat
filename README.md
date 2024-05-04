@@ -33,7 +33,11 @@ These instructions will get you a copy of the project up and running on your loc
    **Run the server:**
 
    ```sh
-   ./server
+   # Run the server:
+   ./server -port <port_number>
+
+   # Replace <port_number> with the desired port number.
+   # If not specified, the default port is 8000.
    ```
 
 4. **Running the Client:**
