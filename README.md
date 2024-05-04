@@ -34,7 +34,7 @@ These instructions will get you a copy of the project up and running on your loc
 
    ```sh
    # Run the server:
-   ./server -port <port_number>
+   ./server/main -port <port_number>
 
    # Replace <port_number> with the desired port number.
    # If not specified, the default port is 8000.
@@ -55,7 +55,11 @@ These instructions will get you a copy of the project up and running on your loc
    **Run the client:**
 
    ```sh
-   ./client
+   # Run the client:
+   ./client/main -port <port_number>
+
+   # Replace <port_number> with the desired port number.
+   # If not specified, the default port is 8000.
    ```
 
    Repeat the steps in "Running the Client" for each additional client you want to connect to the server.

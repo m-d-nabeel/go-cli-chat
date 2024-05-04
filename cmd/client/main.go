@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"os"
 	"os/signal"
@@ -10,6 +11,8 @@ import (
 )
 
 func main() {
+	port := flag.String("port", "8000", "Port number for the server")
+	flag.Parse()
 	signalChan := make(chan os.Signal, 1)
 	signal.Notify(signalChan, syscall.SIGTERM, syscall.SIGINT, syscall.SIGQUIT)
 
@@ -20,13 +23,13 @@ func main() {
 	}
 	defer client.Close()
 
-	err = client.Connect("localhost:8000")
+	err = client.Connect("localhost" + ":" + *port)
 	if err != nil {
 		fmt.Println("Error connecting to server:", err)
 		return
 	}
 
-	fmt.Println("Connected to server")
+	fmt.Println("Connected to server on port", *port)
 	showOptions()
 	go client.ReceiveMessages()
 	go client.SendMessages()
