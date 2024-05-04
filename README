@@ -1,7 +1,3 @@
-Certainly! Here's a formatted version of the README:
-
----
-
 # Command Line Message App
 
 This is a simple command line chat application written in Go.
@@ -63,7 +59,3 @@ These instructions will get you a copy of the project up and running on your loc
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-I've added some section headings for clarity and organized the steps in a step-by-step format for better readability. Let me know if there's anything else you'd like to adjust!
