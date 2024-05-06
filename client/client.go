@@ -51,7 +51,7 @@ func (c *Client) SendMessages() {
 			if len(input) == 1 {
 				input = "[CAT FACT]: " + chat.GetCatFact()
 			}
-			fmt.Print(chat.MoveOneUp + chat.EraseLine + chat.MoveToStart + "You : " + input)
+			fmt.Print(chat.MoveOneUp + chat.EraseLine + chat.MoveToStart + "You : " + input + "\n")
 			inputChan <- input
 		}
 	}()
