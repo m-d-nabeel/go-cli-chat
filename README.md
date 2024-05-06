@@ -2,6 +2,8 @@
 
 This is a simple command line chat application written in Go.
 
+![Chat App Screenshot](chat-app-screenshot.png)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
