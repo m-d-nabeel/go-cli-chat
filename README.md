@@ -2,7 +2,17 @@
 
 This is a simple command line chat application written in Go.
 
-![Chat App Screenshot](chat-app-screenshot.png)
+## Screenshots
+
+### *Client:*
+
+![Chat App Client](images/chat-app-client.png)
+
+### *Server:*
+
+![Chat App Server](images/chat-app-server.png)
+
+---
 
 ## Getting Started
 
