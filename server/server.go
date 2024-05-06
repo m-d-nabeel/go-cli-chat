@@ -159,6 +159,8 @@ func (s *Server) broadcastMessage(msg string, sender *Client) {
 }
 
 func (s *Server) RemoveClient(clnt *Client) {
+	s.mutex.Lock()
+	defer s.mutex.Unlock()
 	for i, client := range s.clients {
 		if client.Connection == clnt.Connection {
 			s.clients = append(s.clients[:i], s.clients[i+1:]...)
