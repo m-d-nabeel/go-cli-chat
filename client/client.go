@@ -48,6 +48,9 @@ func (c *Client) SendMessages() {
 		reader := bufio.NewReader(os.Stdin)
 		for {
 			input, _ := reader.ReadString('\n')
+			if len(input) == 1 {
+				input = "[CAT FACT]: " + chat.GetCatFact()
+			}
 			fmt.Print(chat.MoveOneUp + chat.EraseLine + chat.MoveToStart + "You : " + input)
 			inputChan <- input
 		}

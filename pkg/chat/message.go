@@ -2,7 +2,10 @@ package chat
 
 import (
 	"bufio"
+	"encoding/json"
+	"io"
 	"net"
+	"net/http"
 )
 
 const (
@@ -28,4 +31,25 @@ func ReadMessage(conn net.Conn) (string, error) {
 func WriteMessage(conn net.Conn, msg string) error {
 	_, err := conn.Write([]byte(msg))
 	return err
+}
+
+func GetCatFact() string {
+	resp, err := http.Get("https://catfact.ninja/fact")
+	if err != nil {
+		return ""
+	}
+	defer resp.Body.Close()
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return ""
+	}
+	var fact struct {
+		Fact   string `json:"fact"`
+		Length int    `json:"length"`
+	}
+	err = json.Unmarshal(body, &fact)
+	if err != nil {
+		return ""
+	}
+	return fact.Fact
 }
